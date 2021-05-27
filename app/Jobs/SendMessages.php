@@ -58,7 +58,7 @@ class SendMessages implements ShouldQueue
         }
 
         $response = Http::withHeaders([
-            'Authorization' => env('APP_AUTHORIZATION', 'Bearer pmzR55tvXIcUBWBY9lEsJqa6xarIyrA1e2VYAgG4viGWKZkRfcW8bwm7ZbUg')
+            'Authorization' => env('APP_AUTHORIZATION', null)
         ])->post('https://zapito.com.br/api/messages', [
             'test_mode' => true,
             'data' => $messages
